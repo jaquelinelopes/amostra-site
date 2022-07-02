@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Barbearia Alura</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img src="logo.png" alt="Logo da Barbearia"></h1><!-- descrição da imagem se não carregar -->
+
+            <nav><!-- TAG DE NAVEGAÇÃO - NÃO PRECISA DE CLASS -->
+                <ul>
+                    <li><a href="index.html">Home</a></li><!-- A TAG <a> de ancoragem é utilizada para direcionar um texto ou uma imagem para outra página. -->
+                    <li><a href="produtos.html">Produtos</a></li> <!-- Atributo href serve para indicar o destino a que um link deve nos levar. -->
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form> <!-- TAG PARA FORMULÁRIO -->
+            <label for="nomesobrenome">Nome e sobrenome</label> <!-- LABEL E INPUT SEMPRE JUNTO - LABEL= PRA QUE SERVE-->
+            <input type="text" id="nomesobrenome" class="input-padrao" required> <!-- INPUT= ENTRADA, TAG required é obrigatório -->
+
+            <label for="email">Email</label>
+            <input type="text" id="e-mail" class="input-padrao" required placeholder="seuemail@dominio.com"> <!-- placeholder serve para aparece como o cliente deve preencher -->
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea cols="70" rows="10" id="mensagem"></textarea> <!-- TAG para caixa de texto cols= coluna rows= altura id vem do form-->
+
+            <fieldset> <!-- TAG para vários campos do mesmo assunto -->
+                <legend>Como prefere o nosso contato?</legend> <!-- não tem paragrafo e sim titulo TAG legend -->
+                <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"><!-- CAMPO DE SELECIONAR = esse E-MAIL não aparece, só aparece se tiver no label -->Email</label>
+                
+
+                <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label><!-- a tag name serve para não deixar selecionar todos, mesmo grupo -->
+                
+
+                <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label> <!-- TAG checked significa já deixar selecionado -->
+            </fieldset>
+
+            <fieldset>
+                <legend>Qual horário prefere ser atendindo?</legend>
+                <select> <!-- TAG DE SELEÇÃO -->
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+
+            <label class="checkbox"><input type="checkbox" checked >Gostaria de receber nossas novidades por email?</label>
+            <input type="submit" value="Enviar formulario" class="enviar"> <!-- value é pra sempre ficar em portugues -->
+
+        </form>
+
+        <table> <!-- TAG TABELA, pode ser separada em três, cabeçalho TAG thead, conteudo TAG tbody e rodapé TAG tfoot-->
+            <thead><!-- cabeçalho -->
+                <tr><!--TAG Linhas  -->
+                    <th>Dia</th><!-- TAG celula -->
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody> <!-- corpo -->
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer><!-- TAG DO RODAPÉ -->
+        <img src="logo-branco.png" alt="Logo da Barbearia">
+        <p class="copyright">	
+            &copy;Copyright Barbearia Alura - 2019</p> <!-- 	
+                &copy; simbolo do copy, pegar no site unicode table -->
+    </footer>
+    </body>
+</html>

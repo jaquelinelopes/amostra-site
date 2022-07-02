@@ -1,0 +1,301 @@
+/* http://mobileinputtypes.com/ para ver as tags para preencher o mobile */
+/* pseudoelementos= ::after=depois, ::before=antes, :hover :active :visited(link) :required :first-child=Primeiro da lista, :last-child=último da lista :nth-child (2)=numero do elemento ou (2n)pares, ::first-letter=primeira letra. Marcar melhor os elementos*/
+body {
+    font-family: 'Montserrat', sans-serif; /* peguei no site do google */
+}
+
+header {
+    background: #BBBBBB;
+    padding: 20px 0; /* 20 para cima e para baixo e 0 nas laterais, espaçamento interno, O elemento aumenta o seu tamanho. 
+    Quando declaro que existe um espaçamento interno, estou aumentando o conteúdo. */
+}
+
+.caixa {
+    position: relative; /* posição do menu com relação a caixa */
+    width: 940px; /* tamanho padrão para caixa */
+    margin: 0 auto; /* o tamanho do espaçamento lateral vai calcular automatico */
+}
+nav {
+    position: absolute; /* posição do menu com relação a página*/
+    top: 110px; /* dividir a imagem por 2 para ter saber o centro (tamanho imagem 220px)*/
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px; /* Topo, Direita, Baixo e Esquerda */
+}
+
+nav a {
+    text-transform: uppercase;/* transforma o texto em maiusculo - IDEAL FAZER PELO CSS */
+    color: #000000; /* COR DO TEXTO */
+    font-weight: bold; /* peso da fonte */
+    font-size: 22px;
+    text-decoration: none;/* nenhuma decoração no texto */
+}
+
+nav a:hover { /* link da navegação-quando o mouse estiver por cima do menu  */
+    color: #C78C19;
+    text-decoration: underline;/* sublinhado quando estiver por cima */
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block; /* O tamanho pode ser ajustado, tanto na largura, quanto na altura */
+    text-align: center;
+    width: 30%; /* cada LI */
+    vertical-align: top;
+    /* background: #CCCCCC; USAR ESSA COR PARA VER MELHOR O TAMANHO */
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /* faz com que o espaçamento esteja dentro do percentual MARGIN */
+    border-color: #000000;/* Cor da borda  */
+    border-width: 2px;/* Expessura  */
+    border-style: solid;/* varias opções de bordas: traçejado, ponto,... */
+    /* border: 2px solid #000000; VERSÃO SIMPLIFICADA */
+    border-radius: 10px; /* RAIO DA BORDA DE TODOS OS CAMPOS */
+}
+
+.produtos li {
+    border-color: #C78C19;
+}
+
+.produtos li:active { /*quando o mouse está sendo clicado na borda*/
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 { /*houver=mouse. Para aumentar a fonte da caixa ao selecionar */
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao {
+    font-size: 18px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg"); /* imagem de fundo, pode ser pequena, o css vai replicando*/
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padrao { /* a virgula serve para as outras tags */
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+/* lista de prioridade de alteração no css
+P= 1 (tag)
+form p= 1+1=2 (class)
+identificador= 100 (ID)
+INLINE= 1000 DIRETO NO HTML
+POR ISSO É MELHOR USAR CLASS */
+
+.enviar  {
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none; /* nenhuma borda */
+    border-radius: 5px;
+    transition: 1s all; /* velocidade para mudar a cor quando passar o mouse no botão, ALL= significa para todos os elementos */
+    cursor: pointer; /* alterar a seta para mão do mouse */
+}
+
+.enviar:hover { /* alterar a cor quando o mouse tiver em cima */
+    background: darkorange;
+    transform: scale(1.2); /* aumenta o botão em 20%, tem que fazer em escala */
+    /* Pode usar assim tb  transform: rotate(70deg) scale(1.2), ele altera junto respeitando a ordem, rotate= gira o elemento */
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* css da página inicial */
+.banner {
+    width: 100%;
+}
+
+.titulo-principal /* não usar nome espefico(ex. centralizado) */{
+    text-align: center;
+    font-size: 2em; /* em= significa o dobro da fonte base*/
+    margin: 0 0 1em; /* em= na margin significa o espaço em dobro do tamanho da fonte */
+    clear: left; /* Limpa o float no lado esquerdo do titulo*/
+    /*color: rgba(0, 0, 0,0.3); RGBA=opacidade ca cor do titulo*/
+    /*text-shadow: 2px 2px #FF0000; /* sombra para o texto */
+}
+
+.titulo-principal ::first-letter { /* primeira letra */
+    font-weight: bold;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left; /* faz o texto ficar em volta da imagem, CUIDADO afeta toda a pagina, precisa inclur no css o CLEAR, serve para limpar o float onde entrou errado */
+    margin: 0 20px 20px 0; /* cima, direita, baixo, esquerda */
+}
+
+.mapa {
+    padding: 3em  0;
+    background: linear-gradient(#FEFEFE, #888888); /* degrade na cor, pode colocar quantas cores quiser, 90deg, 50%orange=começa no 50%, radial-gradiente=circulos*/
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    /*box-shadow: inset 0 0 30px #FF0000; Para a sombra funcionar precisar ter um tamanho 30px. (box-shadow: inset 0 0 5px black= Sombra interna, preta, com 5px de espalhamento) */
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;/* utiliza 100% da largura, não pode ter linha vazia no html */
+    vertical-align: top;/* alinhada pela a parte de cima */
+}
+
+.itens {
+    line-height: 1.5; /* altura da linha */
+}
+
+.itens:first-child { /* usando o pseudoelementos para ajustar só 1 class, mesmo que tenha varios itens com a mesma class, first-child= Primeiro de todos os irmãos */
+    font-weight: bold;
+}
+
+.itens::before {
+    content: "🟊"; /* Colocar entre parentes, SÓ FUNCIONA ASSIM */
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1; /* Opacidade(imagem sem luz) vai de 100% a 0, 0 é nenhum brilho. Todos os elementos e todas as cores podem usar*/
+    transition: 400ms ; /* tempo de transição da opacidade para nitidez */
+    box-shadow: 10px 10px 10px 0 #000000; /* -10px -10px yellow, -20px 20px rgba(255,0,0,0.5); Sombra no elemento, depois da virgula são várias sombras.(10px=eixo x, 10px=eixo y,10px=transição, 0(precisa incluir) */
+}
+
+.imagem-beneficios:hover { /* quando o mouse tiver em cima fica nitido*/
+    opacity: 0.3;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto; /* 1 para cima e para baixo e automatica nas laterais */
+}
+
+/* main p { só altera o filho direto do main, não pega da section por mais que esteja dentro do main
+    background: red;
+} */
+
+/* img + p { só altera o paragrafo/seletores depois da imagem
+    background: red   
+}*/
+
+/* ima ~ p { pega todos os paragrafos/seletores depois da imagem
+    background: red
+}*/
+
+/* .principal p:not(#missao) { pega todos os paragrafos/seletores menos o da id=missão
+    background; red   
+}*/
+
+/* .utensilios {
+    width: calc( (100% / 3) - 10px ) ou width: calc( 33% - 10px )= Medidas proporcionais para deixar um elemento de 100% de largura com o equivalente a um terço do elemento pai, menos 10px.
+}*/
+
+@media screen and (max-width: 480px) /* até 480px */{
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }   
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}

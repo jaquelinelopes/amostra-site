@@ -1,0 +1,49 @@
+#banner {
+    width: 100%;
+}
+
+.principal {
+    background: #CCCCCC;
+    padding: 30px;
+}
+
+.titulo-principal {
+    padding-left: 20px;
+}
+
+.titulo-centralizado { /* Tag de marcação - inicia direto*/
+    text-align: center;
+}
+
+p /* Tag de marcação - inicia direto*/{
+    text-align: center;
+}
+
+#missao /* TAG ID (identificado) - inicia com a tralha */{
+    font-size: 20px;
+}
+
+em strong {
+    color: #FF0000;
+}
+
+.itens {/* TAG CLASS - inicia com ponto */
+    font-style: italic;
+}
+
+.beneficios {
+    background: #FFFFFF;
+    padding: 20px;/* espaçamento interno */
+}
+
+
+ul {
+    display: inline-block; /*tamanho do conteudo e depois entrou a imagem*/
+    vertical-align: top; /* alinhado no top */
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagembeneficios {
+    width: 50%;
+}
